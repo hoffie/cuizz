@@ -1,0 +1,67 @@
+.scoreboard tr[data-role=controller] {
+  display: none;
+}
+.scoreboard .average-answer-time {
+  color: #aaa;
+}
+section {
+  display: none;
+}
+
+section.active {
+  display: block;
+}
+
+section.solved li[data-solution] {
+  background: #0a0 !important;
+}
+
+section h2 {
+  margin-top: 0;
+}
+
+.scoreboard .has-answered {
+  background: #fd9;
+}
+
+.scoreboard .inactive {
+  opacity: 0.3;
+}
+
+a {
+  cursor: pointer;
+}
+
+.quiz-area .panel {
+  min-height: 15em;
+}
+
+.quiz-area ol {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.quiz-area ol > li {
+  background: #e5e5e5;
+  box-shadow: 1px 1px 3px #aaa;
+  border-radius: 3px;
+  padding: 1%;
+  width: 48%;
+  float: left;
+  margin: 0.5%;
+}
+.quiz-area ol > li:nth-child(1):before {
+  content: "A: ";
+}
+.quiz-area ol > li:nth-child(2):before {
+  content: "B: ";
+}
+.quiz-area ol > li:nth-child(3):before {
+  content: "C: ";
+}
+.quiz-area ol > li:nth-child(4):before {
+  content: "D: ";
+}
+
+/* vim: set ts=2 sw=2 et: */

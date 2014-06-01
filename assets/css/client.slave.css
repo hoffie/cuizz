@@ -1,0 +1,102 @@
+.connect-view, .quiz-view, .resume-view, .login-view {
+  padding: 1em;
+}
+.quiz-view, .login-view, .resume-view, .status-view {
+  display: none;
+}
+
+.status-view {
+  color: #888;
+}
+.status-view li {
+  line-height: 50px;
+  margin: 0 1.5em;
+}
+
+.form-signin, .form-resume {
+  max-width: 330px;
+  margin: 0 auto;
+  padding: 15px;
+}
+.form-signin .form-signin-heading,
+.form-signin .checkbox,
+.form-resume .form-resume-heading {
+  margin-bottom: 10px;
+}
+
+.form-signin input,
+.form-resume input {
+  margin-bottom: 5px;
+}
+
+.quiz-view ol {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+.quiz-view ol > li {
+  cursor: pointer;
+  background: #e5e5e5;
+  box-shadow: 1px 1px 3px #aaa;
+  border-radius: 3px;
+  padding: 1%;
+  width: 48%;
+  float: left;
+  margin: 0.5%;
+}
+.quiz-view.selected ol > li {
+  opacity: 0.5;
+}
+.quiz-view ol > li:nth-child(1):before {
+  content: "A: ";
+}
+.quiz-view ol > li:nth-child(2):before {
+  content: "B: ";
+}
+.quiz-view ol > li:nth-child(3):before {
+  content: "C: ";
+}
+.quiz-view ol > li:nth-child(4):before {
+  content: "D: ";
+}
+.quiz-view.selected ol > li.selected {
+  opacity: 1;
+  background: #f90;
+}
+.quiz-view .solved ol > li {
+  cursor: not-allowed;
+}
+.quiz-view .solved ol > li.selected {
+  background: #900;
+  color: #fff;
+}
+.quiz-view .solved ol > li.solution {
+  background: #090 !important;
+  color: #fff;
+}
+
+.error {
+  display: none;
+}
+
+
+/* Smartphones (portrait and landscape) ----------- */
+@media only screen
+and (max-width: 768px) {
+/* Styles */
+
+    .quiz-view ol > li {
+        width: 100%;
+        margin-bottom: 15px;
+        height: 40px;
+        vertical-align: middle;
+        padding-top: 9px;
+        padding-left: 15px;
+    }
+
+  .optional-label {
+    display: none;
+  }
+}
+
+/* vim: set ts=2 sw=2 et: */

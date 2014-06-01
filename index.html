@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/assets/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="/assets/css/bootstrap-theme.min.css" />
+    <link rel="stylesheet" href="/assets/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="/assets/css/client.common.css" />
+    <link rel="stylesheet" href="/assets/css/client.slave.css" />
+  </head>
+  <body>
+    <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+      <div class="container">
+        <span class="navbar-brand">Cuizz</span>
+        <ul class="status-view nav navbar-nav">
+          <li class="userid" title="Unknown id" data-toggle="tooltip" data-placement="bottom"><i class="fa fa-user"></i> <span class="name"></span></li>
+          <li title="Rang" data-toggle="tooltip" data-placement="bottom"><i class="fa fa-th-list"></i> <span class="optional-label">Platz: </span><span class="rank">?</span></li>
+          <li title="Punkte" data-toggle="tooltip" data-placement="bottom"><i class="fa fa-bar-chart-o"></i> <span class="optional-label">Punkte: </span><span class="score">0</span></li>
+          <li title="Antwortzeit" data-toggle="tooltip" data-placement="bottom"><i class="fa fa-clock-o"></i> <span class="optional-label">Antwortzeit: </span><span class="average-answer-time">?</span></li>
+          <li title="Verbindungsstatus" data-toggle="tooltip" data-placement="bottom"><i class="fa fa-lightbulb-o"></i> <span class="status"></span></li>
+        </ul>
+      </div>
+    </div>
+    <div class="container main">
+      <div class="row">
+
+        <div class="quiz-area">
+          <div class="panel panel-info">
+            <div class="panel-body">
+
+              <div class="connect-view">
+                Verbinde...
+              </div>
+
+              <div class="resume-view">
+                <form class="form-resume" role="form">
+                  <h2 class="form-resume-heading">Vorherige Session</h2>
+                  <p>Soll versucht werden, die erkannte Sitzung fortzusetzen?</p>
+                  <button class="btn btn-lg btn-primary btn-block">Ja</button>
+                  <button class="btn btn-lg btn-warning btn-block login">Nein, neuer Login</button>
+                </form>
+              </div>
+
+              <div class="login-view">
+                <div class="alert alert-danger error"></div>
+                <form class="form-signin" role="form">
+                  <h2 class="form-signin-heading">Bitte einloggen</h2>
+                  <input type="text" size="20" id="login_name" class="form-control" required autofocus placeholder="Name" />
+                  <button class="btn btn-lg btn-primary btn-block">Einloggen</button>
+                </form>
+              </div>
+
+              <div class="quiz-view">
+                <div class="question">
+                  <p class="waiting">
+                  Auf Frage warten...<br />
+                  <i class="fa fa-spinner fa-spin fa-2x spinner"></i>
+
+                  </p>
+                </div>
+              </div>
+
+
+            </div>
+          </div>
+        </div>
+
+    </div>
+
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="/assets/js/jquery.js"></script>
+    <script src="/assets/js/jquery.cookie.js"></script>
+    <script src="/assets/js/bootstrap.min.js"></script>
+    <script src="/assets/js/client.slave.js"></script>
+    <script>$("[data-toggle=tooltip]").tooltip();</script>
+  </body>
+</html>

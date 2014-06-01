@@ -1,0 +1,19 @@
+body {
+  padding-top: 55px;
+}
+
+
+/* Smartphones (portrait and landscape) ----------- */
+@media only screen
+and (max-width: 768px) {
+/* Styles */
+    body {
+        padding-top: 0px;
+    }
+
+    .navbar-fixed-top {
+        position: static;
+    }
+}
+
+/* vim: set ts=2 sw=2 et: */
