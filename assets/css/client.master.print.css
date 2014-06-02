@@ -1,0 +1,37 @@
+.navbar, .scoreboard {
+    display: none;
+}
+
+.container,
+.row,
+.panel-body,
+.panel-default,
+.panel {
+    width: auto;
+    border: none;
+    box-shadow: none;
+}
+
+h2 {
+    font-size: 1.3em;
+}
+
+section {
+    page-break-after: auto;
+    margin-bottom: 4em;
+}
+
+section > * {
+    page-break-before: avoid;
+    page-break-after: avoid;
+}
+
+section ol li {
+    list-style: upper-latin;
+}
+
+section ol li[data-solution]::after {
+    font-family: "FontAwesome";
+    content: "\f00c";
+    margin-left: 0.3em;
+}

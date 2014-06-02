@@ -4,11 +4,30 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/assets/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="/assets/css/bootstrap-theme.min.css" />
-    <link rel="stylesheet" href="/assets/css/font-awesome.min.css" />
-    <link rel="stylesheet" href="/assets/css/client.common.css" />
-    <link rel="stylesheet" href="/assets/css/client.master.css" />
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="assets/css/bootstrap-theme.min.css"/>
+    <link rel="stylesheet" href="assets/css/font-awesome.min.css"/>
+    <!-- If the query includes 'print-pdf', include the PDF print sheet -->
+    <script>
+        if (window.location.search.match(/print-pdf/gi)) {
+            var link = document.createElement('link');
+            link.rel = 'stylesheet';
+            link.type = 'text/css';
+            link.href = 'assets/css/client.master.print.css';
+            document.getElementsByTagName('head')[0].appendChild(link);
+        } else {
+            var link = document.createElement('link');
+            link.rel = 'stylesheet';
+            link.type = 'text/css';
+            link.href = 'assets/css/client.common.css';
+            document.getElementsByTagName('head')[0].appendChild(link);
+            link = document.createElement('link');
+            link.rel = 'stylesheet';
+            link.type = 'text/css';
+            link.href = 'assets/css/client.master.css';
+            document.getElementsByTagName('head')[0].appendChild(link);
+        }
+    </script>
   </head>
   <body>
     <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
@@ -75,9 +94,9 @@
     </div>
 
     <script src="/socket.io/socket.io.js"></script>
-    <script src="/assets/js/jquery.js"></script>
-    <script src="/assets/js/jquery.cookie.js"></script>
-    <script src="/assets/js/bootstrap.min.js"></script>
-    <script src="/assets/js/client.master.js"></script>
+    <script src="assets/js/jquery.js"></script>
+    <script src="assets/js/jquery.cookie.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/client.master.js"></script>
   </body>
 </html>
