@@ -41,7 +41,7 @@
   border-radius: 3px;
   padding: 1%;
   width: 48%;
-  float: left;
+  display:inline-block;
   margin: 0.5%;
 }
 .quiz-view.selected ol > li {
